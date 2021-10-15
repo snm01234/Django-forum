@@ -1,7 +1,7 @@
 # Django-forum
 python - django 이용한 게시판 
 
-pybo게시판 클론코딩입니다.
+pybo 게시판 클론코딩입니다.
 
 
 구현기능:
