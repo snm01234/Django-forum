@@ -1,5 +1,5 @@
 # Django-forum
-python - django 이용한 게시판 제작예정
+python - django 이용한 게시판
 
 구현기능:
 
@@ -13,10 +13,12 @@ python - django 이용한 게시판 제작예정
 
 댓글 작성 
 
-게시물 추천
+게시물 추천 기능
 
 마크다운 기능
 
 검색 기능
+
+조회수 확인
 
 
