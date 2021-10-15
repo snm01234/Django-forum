@@ -2,7 +2,7 @@ from django.core.paginator import Paginator
 from django.shortcuts import render, get_object_or_404
 from django.db.models import Q, Count
 
-from ..models import Question
+from ..models import Question, QuestionCount
 
 def index(request):
     """
@@ -42,5 +42,27 @@ def detail(request, question_id):
     pybo 내용 출력
     """
     question = get_object_or_404(Question, pk=question_id)
+    
+    # 조회수
+    ip = get_client_ip(request)
+    cnt = QuestionCount.objects.filter(ip=ip, question=question).count()
+    if cnt == 0:
+        qc = QuestionCount(ip=ip, question=question)
+        qc.save()
+        if question.view_count:
+            question.view_count += 1
+        else:
+            question.view_count = 1
+        question.save()
+        
     context = {'question': question}
     return render(request, 'pybo/question_detail.html', context)
+
+def get_client_ip(request):
+    x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
+    if x_forwarded_for:
+        ip = x_forwarded_for.split(',')[-1].strip()
+    else:
+        ip = request.META.get('REMOTE_ADDR')
+    return ip
+
