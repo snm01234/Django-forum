@@ -1,7 +1,9 @@
 # Django-forum
-django로 개발한 웹 게시판 / 박응용님의 pybo 게시판 클론코딩입니다.
+Python Django를 이용하여 개발한 웹 게시판입니다.
 
-구현기능:
+개발 참고도서 : [Do it! 점프 투 장고](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791163032106&orderClick=LEa&Kc=)
+
+## 구현기능:
 
 * 로그인&로그아웃
 
@@ -23,7 +25,7 @@ django로 개발한 웹 게시판 / 박응용님의 pybo 게시판 클론코딩�
 
 * 조회수, 게시날짜 확인
 
-# 웹 게시판 상세 기능 수행 스크린 샷 
+## 웹 게시판 상세 기능 수행 스크린 샷 
 
 메인 페이지
 ![bandicam 2021-11-04 16-16-28-994](https://user-images.githubusercontent.com/55654216/140273081-9664e5b4-1a99-4ac1-b57e-35b30759c7b8.jpg)
